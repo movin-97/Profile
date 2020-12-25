@@ -1,0 +1,192 @@
+
+:root {
+    --bg-color: #ffffff;
+    --skill-bg-color: rgb(40,167,69);
+    --skill-per-bg-color:  #000;
+    --right-head-color: rgb(58, 57, 57) ;
+}
+/* global styles */
+body{
+    background-color: rgb(58, 57, 57);
+}
+a:hover{
+    text-decoration: none;
+    color: green;
+}
+.container-fulid{
+    margin: 20px 30px;
+}
+
+/* ///////////////////LEFT CONTAINER START////////////////////// */
+/* left side container style */
+.left{
+    background-color:var(--bg-color);
+    border-radius: 5px;
+}
+/* profile image style */
+#profile-img{
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+/* paragraph style */
+.r-para{
+    text-align: justify;
+    font-weight: 600;
+    font-size: 18px;
+    font-style: italic;
+    padding: 30px;
+    margin-top: 20px; 
+}
+
+/* button style */
+.btn-size{
+    width: 230px;
+    height: 50px;
+    margin-top: 20px;
+    font-weight:700;
+}
+
+/* social media icons style */
+.s-icon{
+    margin: 30px 20px;
+
+}
+
+/* /////////////////////LEFT CONTAINER END//////////////////////// */
+
+/* ///////////////////RIGHT ABOUT CONTAINER START//////////////////////// */
+/* right side about container style */
+.right-about{
+    background-color: var(--bg-color);
+    margin-left: 10px;
+    border-radius: 5px;
+    padding: 60px;
+}
+
+/* about head color design style */
+.h-bg{
+    background-color: var(--right-head-color);
+    height: 10px;
+}
+/* heading style */
+.heading{
+    font-weight: 700;
+    margin-top: 30px;
+}
+
+/* left paragraph style */
+.l-para{
+    text-indent: 50px;
+    text-align: justify;
+    font-weight: 600;
+    font-size: 18px;
+    font-style: italic;
+}
+/* persinol contact number and email style */
+.con{
+    margin-top: 30px;
+}
+/* ///////////////////RIGHT ABOUT CONTAINER END//////////////////////// */
+
+/* ///////////////////RIGHT SILLS CONTAINER START////////////////////// */
+/* right side skills container style*/
+.right-skills{
+    background-color: var(--bg-color);
+    margin-left: 10px;
+    border-radius: 5px;
+    padding: 60px;
+    display: none;
+}
+/* skill, skills, skills-name, skills-bar, skills-per, hover, after design all style */
+.skill{
+    margin-top: 30px;
+   
+}
+.skills {
+    width: 100%;
+    padding: 0 20px;
+}
+.skill-name {
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 20px 0;
+}
+.skill-bar {
+    height: 20px;
+    background: #cacaca;
+    border-radius: 8px;
+}
+.skill-per {
+    height: 20px;
+    background-color: var(--skill-bg-color);
+    border-radius: 8px;
+    width: 0;
+    position: relative;
+    transition: 1s linear;
+}
+.skill-per::before {
+    content: attr(per);
+    position: absolute;
+    padding: 4px 6px;
+    background-color:var(--skill-per-bg-color);
+    color: #fff;
+    font-size: 12px;
+    border-radius: 4px;
+    top: -35px;
+    right: 0;
+    transform: translateX(50%);
+}
+.skill-per::after {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: var(--skill-per-bg-color);
+    top: -16px;
+    right: 0;
+    transform: translateX(50%) rotate(45deg);
+    border-radius: 2px;
+}
+/* ///////////////////RIGHT SILLS CONTAINER END//////////////////////// */
+
+/* ///////////////////RIGHT CONTACT CONTAINER START////////////////////// */
+/* right-contact container style */
+.right-contact{
+    background-color: var(--bg-color);
+    margin-left: 10px;
+    border-radius: 5px;
+    padding: 60px;
+    display: none;
+}
+/* form label style */
+.form-lab{
+    margin-top: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+/* ///////////////////RIGHT CONTACT CONTAINER END//////////////////////// */
+/* mobile and tablet responsive */
+@media screen and (min-width: 768px) {
+    
+    .s-icon{
+        margin: 40px 10px;
+    }
+}
+@media screen and (max-width: 768px) {
+    .right-about,.right-skills,.right-contact{
+        margin-left: 0;
+        margin-top: 20px;
+        padding: 40px;
+    }
+    #profile-img{
+        width: 150px;
+        height: 150px;
+    }
+    .btn-size{
+        width: 150px;
+        height: 40px;
+        margin-top: 20px;
+    }
+}
